@@ -18,7 +18,7 @@
       </div>
       <nav class="flex-1 p-4 space-y-3">
         <a href="dashboardadmin" class="block py-2 px-4 rounded hover:bg-blue-700">🏛️ Dashboard</a>
-        <a href="data mahasiswa" class="block py-2 px-4 rounded hover:bg-blue-700">🏫 Data Mahasiswa</a>
+        <a href="{{ route('mahasiswa.index') }}" class="block py-2 px-4 rounded hover:bg-blue-700">🏫 Data Mahasiswa</a>
         <a href="data dosen" class="block py-2 px-4 rounded hover:bg-blue-700">👨‍🏫 Data Dosen</a>
         <a href="mata kuliah" class="block py-2 px-4 rounded hover:bg-blue-700">📖 Mata Kuliah</a>
         <a href="nilai" class="block py-2 px-4 rounded hover:bg-blue-700">📝 Nilai</a>
