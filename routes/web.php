@@ -54,6 +54,9 @@ Route::get('/mata kuliah', function () {
     return view('admin.mata_kuliah');
 });
 
+Route::get('/nilai', function () {
+    return view('admin.nilai');
+});
 
 
 // SISTEM CRUD TAMBAH
@@ -95,6 +98,22 @@ Route::get('/edit nilai', function () {
 
 Route::resource('mahasiswa', MahasiswaController::class);
 
+Route::get('/data mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
+
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
+Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
+
+Route::get('/mahasiswa/{mahasiswa}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
+Route::put('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
+
+Route::resource('data dosen', DosenController::class);
+
+Route::get('/dosen/create', [DosenController::class, 'create'])->name('dosen.create');
+Route::post('/dosen', [DosenController::class, 'store'])->name('dosen.store');
+
+Route::get('/dosen/{dosen}/edit', [DosenController::class, 'edit'])->name('dosen.edit');
+Route::put('/dosen/{dosen}', [DosenController::class, 'update'])->name('dosen.update');
+
 Route::resource('dosen', DosenController::class);
 
 
@@ -102,6 +121,12 @@ Route::resource('dosen', DosenController::class);
 Route::resource('matakuliah', MatakuliahController::class);
 
 Route::get('/mata kuliah', [MatakuliahController::class, 'index'])->name('matakkuliah.index');
+
+Route::get('/matakuliah/create', [MatakuliahController::class, 'create'])->name('matakuliah.create');
+Route::post('/matakuliah', [MatakuliahController::class, 'store'])->name('matakuliah.store');
+
+Route::get('/matakuliah/{matakuliah}/edit', [MatakuliahController::class, 'edit'])->name('matakuliah.edit');
+Route::put('/matakuliah/{matakuliah}', [MatakuliahController::class, 'update'])->name('matakuliah.update');
 
 
 // NILAI
