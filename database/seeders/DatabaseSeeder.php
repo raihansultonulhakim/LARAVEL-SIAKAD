@@ -18,9 +18,9 @@ class DatabaseSeeder extends Seeder
 
     // Bikin data user baru sesuai keinginan kamu
     \App\Models\User::create([
-        'name' => 'Nama Kamu',
-        'email' => 'emailkamu@gmail.com', // <-- Ganti pakai emailmu
-        'password' => \Illuminate\Support\Facades\Hash::make('password123'), // <-- Ganti pakai passwordmu
+        'name' => 'Raihan',
+        'email' => 'raihanhakim@gmail.com', // <-- Ganti pakai emailmu
+        'password' => \Illuminate\Support\Facades\Hash::make('raihan123'), // <-- Ganti pakai passwordmu
         'role' => 'admin', // <-- Ambil contoh dari migration-mu yang ada kolom role
     ]);
 }
