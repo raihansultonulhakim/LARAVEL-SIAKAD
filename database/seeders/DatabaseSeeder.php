@@ -12,12 +12,16 @@ class DatabaseSeeder extends Seeder
      * Seed the application's database.
      */
     public function run(): void
-    {
-        // User::factory(10)->create();
+{
+    // Hapus atau komentari baris factory bawaan yang lama
+    // User::factory()->create([...]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-    }
+    // Bikin data user baru sesuai keinginan kamu
+    \App\Models\User::create([
+        'name' => 'Nama Kamu',
+        'email' => 'emailkamu@gmail.com', // <-- Ganti pakai emailmu
+        'password' => \Illuminate\Support\Facades\Hash::make('password123'), // <-- Ganti pakai passwordmu
+        'role' => 'admin', // <-- Ambil contoh dari migration-mu yang ada kolom role
+    ]);
+}
 }
