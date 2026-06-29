@@ -16,13 +16,14 @@ public function index()
 
 public function create()
 {
-    return view('admin.crud.tambah_datadosen');
+    $nextNip = Dosen::generateUniqueNip();
+    return view('admin.crud.tambah_datadosen', compact('nextNip'));
 }
 
 public function store(Request $request)
 {
     $request->validate([
-        'nip' => 'required|string|max:255',
+        'nip' => 'required|string|max:255|unique:dosen,nip',
         'nama' => 'required',
         'prodi' => 'required',
         'jabatan_akademik' => 'required',

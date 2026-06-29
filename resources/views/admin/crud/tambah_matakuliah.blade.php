@@ -18,6 +18,7 @@
       <div>
         <label for="kode_mk" class="block text-gray-700 font-medium">Kode Mata Kuliah</label>
         <input type="text" id="kode_mk" name="kode_mk" 
+               value="{{ $kodeMk ?? '' }}"
                class="w-full border rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-400 outline-none" 
                placeholder="Masukkan Kode Mata Kuliah">
       </div>
@@ -46,12 +47,15 @@
                placeholder="Masukkan Semester">
       </div>
 
-      <!-- Email -->
+      <!-- Dosen Pengampu -->
       <div>
-        <label for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen Pengampu</label>
-        <input type="text" id="dosen_pengampu" name="dosen_pengampu" 
-               class="w-full border rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-400 outline-none" 
-               placeholder="Masukkan dosen pengampu">
+        <label for="dosen_id" class="block text-gray-700 font-medium">Dosen Pengampu</label>
+        <select id="dosen_id" name="dosen_id" class="w-full border rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-400 outline-none">
+          <option value="">-- Pilih Dosen (opsional) --</option>
+          @foreach($dosen as $d)
+            <option value="{{ $d->id }}">{{ $d->nama }} ({{ $d->nip }})</option>
+          @endforeach
+        </select>
       </div>
 
       <!-- Tombol (full width, 2 kolom) -->

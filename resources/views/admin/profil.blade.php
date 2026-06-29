@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIAKAD Dashboard</title>
+  <title>SIAKAD Profile</title>
   <link rel="icon" type="image/png" href="{{ asset('img/LOGO_POLTEKAD.png') }}">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -154,12 +154,19 @@
             Once your account is deleted, all of its resources and data will be permanently deleted.
         </p>
 
-        <form method="POST" action="{{ route('profile.destroy') }}" class="mt-6">
+        <form method="POST" action="{{ route('profile.destroy') }}" class="mt-6 space-y-4">
             @csrf
             @method('DELETE')
 
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Konfirmasi Password</label>
+                <input id="password" name="password" type="password"
+                    class="mt-1 block w-full rounded-md border-gray-300 text-gray-900 p-2 shadow-sm focus:ring-red-500 focus:border-red-500"
+                    required>
+            </div>
+
             <button type="submit"
-                onclick="return confirm('Are you sure you want to delete your account?')"
+                onclick="return confirm('Yakin ingin menghapus akun Anda?')"
                 class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
                 Delete Account
             </button>

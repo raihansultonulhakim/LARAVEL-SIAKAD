@@ -6,6 +6,8 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NilaiController;
+use App\Http\Controllers\PublicMahasiswaController;
+use App\Http\Controllers\PublicDosenController;
 use Illuminate\Support\Facades\Route; 
 
 Route::get('/', function () {
@@ -17,9 +19,9 @@ Route::get('profil', function () {
 })->middleware('auth')->name('admin.profil');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -40,7 +42,9 @@ Route::get('/mahasiswa', fn() => "Halaman Mahasiswa")
 //     return view('admin.dashboard_siakad');
 // });
 
-Route::get('/dashboardadmin', [DashboardController::class, 'index']);
+Route::get('/dashboardadmin', [DashboardController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('dashboardadmin');
 
 Route::get('/data mahasiswa', function () {
     return view('admin.data_mahasiswa');
@@ -60,18 +64,10 @@ Route::get('/nilai', function () {
 
 
 // SISTEM CRUD TAMBAH
+// Mahasiswa create now uses controller route: GET /mahasiswa/create
+// Dosen create now uses controller route: GET /dosen/create
 
-Route::get('/tambah data mahasiswa', function () {
-    return view('admin.crud.tambah_datamahasiswa');
-});
-
-Route::get('/tambah data dosen', function () {
-    return view('admin.crud.tambah_datadosen');
-});
-
-Route::get('/tambah mata kuliah', function () {
-    return view('admin.crud.tambah_matakuliah');
-});
+// replaced by controller route: Route::get('/matakuliah/create', [MatakuliahController::class, 'create'])->name('matakuliah.create');
 
 Route::get('/tambah nilai', function () {
     return view('admin.crud.tambah_nilai');
@@ -88,9 +84,7 @@ Route::get('/edit data dosen', function () {
     return view('admin.crud.edit_datadosen');
 });
 
-Route::get('/edit mata kuliah', function () {
-    return view('admin.crud.edit_matakuliah');
-});
+// replaced by controller route: Route::get('/matakuliah/{matakuliah}/edit', [MatakuliahController::class, 'edit'])->name('matakuliah.edit');
 
 Route::get('/edit nilai', function () {
     return view('admin.crud.edit_nilai');
@@ -137,3 +131,10 @@ Route::resource('nilai', NilaiController::class);
 
 
 require __DIR__.'/auth.php';
+
+// Public student lookup (no authentication required)
+Route::get('/cek-mahasiswa', [PublicMahasiswaController::class, 'index'])->name('public.mahasiswa.search');
+
+// Public dosen directory and profile
+Route::get('/data-dosen', [PublicDosenController::class, 'index'])->name('public.dosen.index');
+Route::get('/data-dosen/{dosen}', [PublicDosenController::class, 'show'])->name('public.dosen.show');

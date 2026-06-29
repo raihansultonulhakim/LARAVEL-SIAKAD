@@ -32,21 +32,13 @@ class AuthenticatedSessionController extends Controller
     // }
 
     public function store(LoginRequest $request): RedirectResponse
-{
-    $request->authenticate();
+    {
+        $request->authenticate();
 
-    $request->session()->regenerate();
+        $request->session()->regenerate();
 
-    $role = auth()->user()->role;
-
-    if ($role === 'admin') {
         return redirect('/dashboardadmin');
-    } elseif ($role === 'dosen') {
-        return redirect('/dosen');
-    } else {
-        return redirect('/mahasiswa');
     }
-}
 
 
     /**

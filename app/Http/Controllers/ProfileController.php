@@ -42,11 +42,16 @@ class ProfileController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
-        $request->validateWithBag('userDeletion', [
-            'password' => ['required', 'current_password'],
-        ]);
-
         $user = $request->user();
+
+        if (! Auth::guard('web')->validate([
+            'email' => $user->email,
+            'password' => $request->password,
+        ])) {
+            return back()->withErrors([
+                'password' => 'Password yang Anda masukkan salah.',
+            ]);
+        }
 
         Auth::logout();
 
@@ -55,6 +60,6 @@ class ProfileController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return Redirect::to('/');
+        return redirect('/')->with('status', 'Akun berhasil dihapus.');
     }
 }

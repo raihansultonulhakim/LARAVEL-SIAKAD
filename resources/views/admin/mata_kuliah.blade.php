@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIAKAD Dashboard</title>
+  <title>SIAKAD Mata Kuliah</title>
    <link rel="icon" type="image/png" href="{{ asset('img/LOGO_POLTEKAD.png') }}">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -76,7 +76,7 @@
 <div class="p-6">
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="font-semibold text-lg mb-4">Mata Kuliah</h3>
-        <a href="tambah mata kuliah">
+        <a href="{{ route('matakuliah.create') }}">
           <button class="mb-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded flex items-center gap-2">
   <span>➕</span> Tambah
 </button>
@@ -101,7 +101,7 @@
     <td class="border px-4 py-2">{{ $mk->nama_mk }}</td>
     <td class="border px-4 py-2">{{ $mk->sks }}</td>
     <td class="border px-4 py-2">{{ $mk->semester }}</td>
-    <td class="border px-4 py-2">{{ $mk->dosen_pengampu }}</td>
+    <td class="border px-4 py-2">{{ $mk->dosen->nama ?? $mk->dosen_pengampu ?? '-' }}</td>
     <td class="border px-4 py-2 flex gap-2 justify-center">
     <a href="{{ route('matakuliah.edit', $mk->id) }}" class="bg-yellow-400 px-2 py-1 rounded">✏️ Edit</a>
 

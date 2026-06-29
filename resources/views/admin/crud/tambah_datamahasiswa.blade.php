@@ -17,6 +17,7 @@
       <div>
         <label for="nim" class="block text-gray-700 font-medium">NIM</label>
         <input type="text" id="nim" name="nim" 
+               value="{{ $nextNIM ?? '' }}"
                class="w-full border rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-400 outline-none" 
                placeholder="Masukkan NIM">
       </div>

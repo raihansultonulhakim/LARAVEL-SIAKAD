@@ -1,0 +1,475 @@
+﻿
+app\Http\Controllers\MatakuliahController.php:28:        'dosen_pengampu' => 
+'required',
+app\Http\Controllers\MatakuliahController.php:36:        'dosen_pengampu' => 
+$request->dosen_pengampu,
+app\Http\Controllers\MatakuliahController.php:54:        'dosen_pengampu' => 
+'required',
+app\Http\Controllers\PublicMahasiswaController.php:20:        $jadwal = 
+collect();
+app\Http\Controllers\PublicMahasiswaController.php:36:                // 
+jadwal sederhana: tampilkan mata kuliah untuk semester tersebut
+app\Http\Controllers\PublicMahasiswaController.php:38:                    
+$jadwal = Matakuliah::where('semester', $semester)->get();
+app\Http\Controllers\PublicMahasiswaController.php:59:        return 
+view('public.cek_mahasiswa', compact('nim', 'mahasiswa', 'nilaiList', 
+'jadwal', 'ipk', 'semester'));
+app\Models\Matakuliah.php:19:        'dosen_pengampu',
+bootstrap\cache\services.php:115:    
+'Illuminate\\Console\\Scheduling\\ScheduleFinishCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+bootstrap\cache\services.php:116:    
+'Illuminate\\Console\\Scheduling\\ScheduleListCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+bootstrap\cache\services.php:117:    
+'Illuminate\\Console\\Scheduling\\ScheduleRunCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+bootstrap\cache\services.php:118:    
+'Illuminate\\Console\\Scheduling\\ScheduleClearCacheCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+bootstrap\cache\services.php:119:    
+'Illuminate\\Console\\Scheduling\\ScheduleTestCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+bootstrap\cache\services.php:120:    
+'Illuminate\\Console\\Scheduling\\ScheduleWorkCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+bootstrap\cache\services.php:121:    
+'Illuminate\\Console\\Scheduling\\ScheduleInterruptCommand' => 
+'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+database\migrations\2025_08_26_021415_add_role_to_matakuliah_table.php:20:     
+   $table->string('dosen_pengampu');
+resources\views\admin\crud\edit_matakuliah.blade.php:56:        <label 
+for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen 
+Pengampu</label>
+resources\views\admin\crud\edit_matakuliah.blade.php:57:        <input 
+type="text" id="dosen_pengampu" name="dosen_pengampu" 
+resources\views\admin\crud\edit_matakuliah.blade.php:58:                
+value="{{ $matakuliah->dosen_pengampu }}"
+resources\views\admin\crud\tambah_matakuliah.blade.php:51:        <label 
+for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen 
+Pengampu</label>
+resources\views\admin\crud\tambah_matakuliah.blade.php:52:        <input 
+type="text" id="dosen_pengampu" name="dosen_pengampu" 
+resources\views\admin\mata_kuliah.blade.php:104:    <td class="border px-4 
+py-2">{{ $mk->dosen_pengampu }}</td>
+resources\views\public\cek_mahasiswa.blade.php:32:              <p 
+class="text-muted mb-3">Masukkan NIM mahasiswa untuk melihat biodata, jadwal, 
+dan nilai.</p>
+resources\views\public\cek_mahasiswa.blade.php:83:                    <i 
+class="bi bi-calendar3 me-2"></i>Jadwal Kuliah (Semester {{ $semester ?? '-' 
+}})
+resources\views\public\cek_mahasiswa.blade.php:97:                          
+@forelse($jadwal as $mk)
+resources\views\public\cek_mahasiswa.blade.php:102:                            
+  <td>{{ $mk->dosen_pengampu ?? '-' }}</td>
+resources\views\public\cek_mahasiswa.blade.php:105:                            
+<tr><td colspan="4" class="text-center py-3">Tidak ada jadwal untuk semester 
+ini.</td></tr>
+resources\views\landing.blade.php:38:            <p>Lihat jadwal kuliah, 
+nilai, dan KRS dengan mudah.</p>
+storage\framework\views\0bcef206687c8080804ee7eb32d57621.php:56:        <label 
+for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen 
+Pengampu</label>
+storage\framework\views\0bcef206687c8080804ee7eb32d57621.php:57:        <input 
+type="text" id="dosen_pengampu" name="dosen_pengampu" 
+storage\framework\views\0bcef206687c8080804ee7eb32d57621.php:58:               
+ value="<?php echo e($matakuliah->dosen_pengampu); ?>"
+storage\framework\views\0cb53f083294530debcf2bf27594a10f.php:51:        <label 
+for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen 
+Pengampu</label>
+storage\framework\views\0cb53f083294530debcf2bf27594a10f.php:52:        <input 
+type="text" id="dosen_pengampu" name="dosen_pengampu" 
+storage\framework\views\23846c6b32c7466f720ef60ec288d321.php:56:        <label 
+for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen 
+Pengampu</label>
+storage\framework\views\23846c6b32c7466f720ef60ec288d321.php:57:        <input 
+type="text" id="dosen_pengampu" name="dosen_pengampu" 
+storage\framework\views\23846c6b32c7466f720ef60ec288d321.php:58:               
+ value="<?php echo e($matakuliah->dosen_pengampu); ?>"
+storage\framework\views\5052e8571a3a1b9b64ab4b04a521a9c9.php:51:        <label 
+for="dosen_pengampu" class="block text-gray-700 font-medium">Dosen 
+Pengampu</label>
+storage\framework\views\5052e8571a3a1b9b64ab4b04a521a9c9.php:52:        <input 
+type="text" id="dosen_pengampu" name="dosen_pengampu" 
+storage\framework\views\7cc51ce00c2bbc19f1743718e0ae2c08.php:37:            
+<p>Lihat jadwal kuliah, nilai, dan KRS dengan mudah.</p>
+storage\framework\views\99d173aae9ca42d93dada6374ba8550e.php:104:    <td 
+class="border px-4 py-2"><?php echo e($mk->dosen_pengampu); ?></td>
+storage\framework\views\9be9b87930825f2bb3a8fc0446794bb1.php:38:            
+<p>Lihat jadwal kuliah, nilai, dan KRS dengan mudah.</p>
+storage\framework\views\c8259cf191743e8dcdd2a6b3aa264fed.php:32:              
+<p class="text-muted mb-3">Masukkan NIM mahasiswa untuk melihat biodata, 
+jadwal, dan nilai.</p>
+storage\framework\views\c8259cf191743e8dcdd2a6b3aa264fed.php:83:               
+     <i class="bi bi-calendar3 me-2"></i>Jadwal Kuliah (Semester <?php echo 
+e($semester ?? '-'); ?>)
+storage\framework\views\c8259cf191743e8dcdd2a6b3aa264fed.php:97:               
+           <?php $__empty_1 = true; $__currentLoopData = $jadwal; 
+$__env->addLoop($__currentLoopData); foreach($__currentLoopData as $mk): 
+$__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = 
+false; ?>
+storage\framework\views\c8259cf191743e8dcdd2a6b3aa264fed.php:102:              
+                <td><?php echo e($mk->dosen_pengampu ?? '-'); ?></td>
+storage\framework\views\c8259cf191743e8dcdd2a6b3aa264fed.php:105:              
+              <tr><td colspan="4" class="text-center py-3">Tidak ada jadwal 
+untuk semester ini.</td></tr>
+storage\framework\views\d3d88f4ae3c99afa4c28bb68c8952653.php:104:    <td 
+class="border px-4 py-2"><?php echo e($mk->dosen_pengampu); ?></td>
+vendor\composer\autoload_classmap.php:1228:    
+'Illuminate\\Console\\Events\\ScheduledBackgroundTaskFinished' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledBackgroundTaskFinish
+ed.php',
+vendor\composer\autoload_classmap.php:1229:    
+'Illuminate\\Console\\Events\\ScheduledTaskFailed' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskFailed.php',
+vendor\composer\autoload_classmap.php:1230:    
+'Illuminate\\Console\\Events\\ScheduledTaskFinished' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskFinished.php',
+vendor\composer\autoload_classmap.php:1231:    
+'Illuminate\\Console\\Events\\ScheduledTaskSkipped' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskSkipped.php',
+vendor\composer\autoload_classmap.php:1232:    
+'Illuminate\\Console\\Events\\ScheduledTaskStarting' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskStarting.php',
+vendor\composer\autoload_classmap.php:1251:    
+'Illuminate\\Console\\Scheduling\\Schedule' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/Schedule.php',
+vendor\composer\autoload_classmap.php:1252:    
+'Illuminate\\Console\\Scheduling\\ScheduleClearCacheCommand' => $vendorDir . '/
+laravel/framework/src/Illuminate/Console/Scheduling/ScheduleClearCacheCommand.p
+hp',
+vendor\composer\autoload_classmap.php:1253:    
+'Illuminate\\Console\\Scheduling\\ScheduleFinishCommand' => $vendorDir . '/lara
+vel/framework/src/Illuminate/Console/Scheduling/ScheduleFinishCommand.php',
+vendor\composer\autoload_classmap.php:1254:    
+'Illuminate\\Console\\Scheduling\\ScheduleInterruptCommand' => $vendorDir . '/l
+aravel/framework/src/Illuminate/Console/Scheduling/ScheduleInterruptCommand.php
+',
+vendor\composer\autoload_classmap.php:1255:    
+'Illuminate\\Console\\Scheduling\\ScheduleListCommand' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleListCommand.php',
+vendor\composer\autoload_classmap.php:1256:    
+'Illuminate\\Console\\Scheduling\\ScheduleRunCommand' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleRunCommand.php',
+vendor\composer\autoload_classmap.php:1257:    
+'Illuminate\\Console\\Scheduling\\ScheduleTestCommand' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleTestCommand.php',
+vendor\composer\autoload_classmap.php:1258:    
+'Illuminate\\Console\\Scheduling\\ScheduleWorkCommand' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleWorkCommand.php',
+vendor\composer\autoload_classmap.php:2253:    
+'Illuminate\\Support\\Facades\\Schedule' => $vendorDir . 
+'/laravel/framework/src/Illuminate/Support/Facades/Schedule.php',
+vendor\composer\autoload_static.php:1833:        
+'Illuminate\\Console\\Events\\ScheduledBackgroundTaskFinished' => __DIR__ . 
+'/..' . '/laravel/framework/src/Illuminate/Console/Events/ScheduledBackgroundTa
+skFinished.php',
+vendor\composer\autoload_static.php:1834:        
+'Illuminate\\Console\\Events\\ScheduledTaskFailed' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskFailed.php',
+vendor\composer\autoload_static.php:1835:        
+'Illuminate\\Console\\Events\\ScheduledTaskFinished' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskFinished.php',
+vendor\composer\autoload_static.php:1836:        
+'Illuminate\\Console\\Events\\ScheduledTaskSkipped' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskSkipped.php',
+vendor\composer\autoload_static.php:1837:        
+'Illuminate\\Console\\Events\\ScheduledTaskStarting' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskStarting.php',
+vendor\composer\autoload_static.php:1856:        
+'Illuminate\\Console\\Scheduling\\Schedule' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/Schedule.php',
+vendor\composer\autoload_static.php:1857:        
+'Illuminate\\Console\\Scheduling\\ScheduleClearCacheCommand' => __DIR__ . 
+'/..' . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleClearCach
+eCommand.php',
+vendor\composer\autoload_static.php:1858:        
+'Illuminate\\Console\\Scheduling\\ScheduleFinishCommand' => __DIR__ . '/..' . '
+/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleFinishCommand.php'
+,
+vendor\composer\autoload_static.php:1859:        
+'Illuminate\\Console\\Scheduling\\ScheduleInterruptCommand' => __DIR__ . '/..' 
+. '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleInterruptComman
+d.php',
+vendor\composer\autoload_static.php:1860:        
+'Illuminate\\Console\\Scheduling\\ScheduleListCommand' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleListCommand.php',
+vendor\composer\autoload_static.php:1861:        
+'Illuminate\\Console\\Scheduling\\ScheduleRunCommand' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleRunCommand.php',
+vendor\composer\autoload_static.php:1862:        
+'Illuminate\\Console\\Scheduling\\ScheduleTestCommand' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleTestCommand.php',
+vendor\composer\autoload_static.php:1863:        
+'Illuminate\\Console\\Scheduling\\ScheduleWorkCommand' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleWorkCommand.php',
+vendor\composer\autoload_static.php:2858:        
+'Illuminate\\Support\\Facades\\Schedule' => __DIR__ . '/..' . 
+'/laravel/framework/src/Illuminate/Support/Facades/Schedule.php',
+vendor\dragonmantank\cron-expression\src\Cron\CronExpression.php:22: * 
+Schedule parts must map to:
+vendor\dragonmantank\cron-expression\src\Cron\CronExpression.php:367:     *    
+                 cron schedule string
+vendor\fakerphp\faker\src\Faker\Provider\pl_PL\Text.php:37:     * [Yes, we are 
+more than one year ahead of schedule]
+vendor\guzzlehttp\psr7\src\MimeType.php:855:        'scd' => 
+'application/x-msschedule',
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledBackgroundTaskF
+inished.php:7:class ScheduledBackgroundTaskFinished
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledBackgroundTaskF
+inished.php:12:     * @param  \Illuminate\Console\Scheduling\Event  $task  The 
+scheduled event that ran.
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskFailed.php:
+8:class ScheduledTaskFailed
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskFailed.php:
+13:     * @param  \Illuminate\Console\Scheduling\Event  $task  The scheduled 
+event that failed.
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskFinished.ph
+p:7:class ScheduledTaskFinished
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskFinished.ph
+p:12:     * @param  \Illuminate\Console\Scheduling\Event  $task  The scheduled 
+event that ran.
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskFinished.ph
+p:13:     * @param  float  $runtime  The runtime of the scheduled event.
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskSkipped.php
+:7:class ScheduledTaskSkipped
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskSkipped.php
+:12:     * @param  \Illuminate\Console\Scheduling\Event  $task  The scheduled 
+event being run.
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskStarting.ph
+p:7:class ScheduledTaskStarting
+vendor\laravel\framework\src\Illuminate\Console\Events\ScheduledTaskStarting.ph
+p:12:     * @param  \Illuminate\Console\Scheduling\Event  $task  The scheduled 
+event being run.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CallbackEvent.php:56
+:                'Invalid scheduled callback event. Must be a string or 
+callable.'
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CallbackEvent.php:10
+4:        throw new RuntimeException('Scheduled closures can not be run in the 
+background.');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CallbackEvent.php:14
+2:                "A scheduled event name is required to prevent overlapping. 
+Use the 'name' method before 'withoutOverlapping'."
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CallbackEvent.php:16
+0:                "A scheduled event name is required to only run on one 
+server. Use the 'name' method before 'onOneServer'."
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CallbackEvent.php:18
+2:     * Get the mutex name for the scheduled command.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CallbackEvent.php:18
+8:        return 'framework/schedule-'.sha1($this->description ?? '');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\CommandBuilder.php:5
+2:        $finished = Application::formatCommandString('schedule:finish').' 
+"'.$event->mutexName().'"';
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:381:     
+* E-mail the results of the scheduled operation.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:401:     
+* E-mail the results of the scheduled operation if it produces output.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:414:     
+* E-mail the results of the scheduled operation if it fails.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:438:      
+      $this->sendOutputTo(storage_path('logs/schedule-'.sha1($this->mutexName()
+).'.log'));
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:474:      
+  return "Scheduled Job Output For [{$this->command}]";
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:802:     
+* Get the mutex name for the scheduled command.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Event.php:814:      
+  return 'framework'.DIRECTORY_SEPARATOR.'schedule-'.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesAttributes.ph
+p:181:     * Register a callback to further filter the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesAttributes.ph
+p:196:     * Register a callback to further filter the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:26:     * Schedule the event to run between start and end time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:38:     * Schedule the event to not run between start and end time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:50:     * Schedule the event to run between start and end time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:76:     * Schedule the event to run every second.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:86:     * Schedule the event to run every two seconds.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:96:     * Schedule the event to run every five seconds.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:106:     * Schedule the event to run every ten seconds.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:116:     * Schedule the event to run every fifteen seconds.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:126:     * Schedule the event to run every twenty seconds.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:136:     * Schedule the event to run every thirty seconds.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:146:     * Schedule the event to run multiple times per minute.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:163:     * Schedule the event to run every minute.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:173:     * Schedule the event to run every two minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:183:     * Schedule the event to run every three minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:193:     * Schedule the event to run every four minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:203:     * Schedule the event to run every five minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:213:     * Schedule the event to run every ten minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:223:     * Schedule the event to run every fifteen minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:233:     * Schedule the event to run every thirty minutes.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:243:     * Schedule the event to run hourly.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:253:     * Schedule the event to run hourly at a given offset in the hour.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:260:        return $this->hourBasedSchedule($offset, '*');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:264:     * Schedule the event to run every odd hour.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:271:        return $this->hourBasedSchedule($offset, '1-23/2');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:275:     * Schedule the event to run every two hours.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:282:        return $this->hourBasedSchedule($offset, '*/2');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:286:     * Schedule the event to run every three hours.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:293:        return $this->hourBasedSchedule($offset, '*/3');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:297:     * Schedule the event to run every four hours.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:304:        return $this->hourBasedSchedule($offset, '*/4');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:308:     * Schedule the event to run every six hours.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:315:        return $this->hourBasedSchedule($offset, '*/6');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:319:     * Schedule the event to run daily.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:325:        return $this->hourBasedSchedule(0, 0);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:329:     * Schedule the command at a given time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:340:     * Schedule the event to run daily at a given time (10:00, 19:30, 
+etc).
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:349:        return $this->hourBasedSchedule(
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:356:     * Schedule the event to run twice daily.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:368:     * Schedule the event to run twice daily at a given offset.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:379:        return $this->hourBasedSchedule($offset, $hours);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:383:     * Schedule the event to run at the given minutes and hours.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:389:    protected function hourBasedSchedule($minutes, $hours)
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:400:     * Schedule the event to run only on weekdays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:406:        return $this->days(Schedule::MONDAY.'-'.Schedule::FRIDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:410:     * Schedule the event to run only on weekends.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:416:        return $this->days(Schedule::SATURDAY.','.Schedule::SUNDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:420:     * Schedule the event to run only on Mondays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:426:        return $this->days(Schedule::MONDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:430:     * Schedule the event to run only on Tuesdays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:436:        return $this->days(Schedule::TUESDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:440:     * Schedule the event to run only on Wednesdays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:446:        return $this->days(Schedule::WEDNESDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:450:     * Schedule the event to run only on Thursdays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:456:        return $this->days(Schedule::THURSDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:460:     * Schedule the event to run only on Fridays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:466:        return $this->days(Schedule::FRIDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:470:     * Schedule the event to run only on Saturdays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:476:        return $this->days(Schedule::SATURDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:480:     * Schedule the event to run only on Sundays.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:486:        return $this->days(Schedule::SUNDAY);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:490:     * Schedule the event to run weekly.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:502:     * Schedule the event to run weekly on a given day and time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:516:     * Schedule the event to run monthly.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:528:     * Schedule the event to run monthly on a given day and time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:542:     * Schedule the event to run twice monthly at a given time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:559:     * Schedule the event to run on the last day of the month.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:572:     * Schedule the event to run quarterly.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:585:     * Schedule the event to run quarterly on a given day and time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:600:     * Schedule the event to run yearly.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ManagesFrequencies.p
+hp:613:     * Schedule the event to run yearly on a given month, day, and time.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\PendingEventAttribut
+es.php:6: * @mixin \Illuminate\Console\Scheduling\Schedule
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\PendingEventAttribut
+es.php:16:        protected Schedule $schedule,
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\PendingEventAttribut
+es.php:87:     * Proxy missing methods onto the underlying schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\PendingEventAttribut
+es.php:91:        return $this->schedule->{$method}(...$parameters);
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:28:clas
+s Schedule
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:49:    
+ * All of the events on the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:98:    
+ * The schedule group attributes stack.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:105:   
+  * Create a new schedule instance.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:117:   
+             'A container implementation is required to use the scheduler. 
+Please install the illuminate/container package.'
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:133:   
+  * Add a new callback event to the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:151:   
+  * Add a new Artisan command event to the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:183:   
+  * Add a new job callback event to the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:282:   
+  * Add a new command event to the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:302:   
+  * Create new schedule group.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:312:   
+         throw new RuntimeException('Invoke an attribute method such as 
+Schedule::daily() before defining a schedule group.');
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:403:   
+  * Get all of the events on the schedule that are due.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:414:   
+  * Get all of the events on the schedule.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\Schedule.php:466:   
+  * Dynamically handle calls into the schedule instance.
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ScheduleClearCacheCo
+mmand.php:8:#[AsCommand(name: 'schedule:clear-cache')]
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ScheduleClearCacheCo
+mmand.php:9:class ScheduleClearCacheCommand extends Command
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ScheduleClearCacheCo
+mmand.php:16:    protected $name = 'schedule:clear-cache';
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ScheduleClearCacheCo
+mmand.php:23:    protected $description = 'Delete the cached mutex files 
+created by scheduler';
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ScheduleClearCacheCo
+mmand.php:28:     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+vendor\laravel\framework\src\Illuminate\Console\Scheduling\ScheduleClearCacheCo
+mmand.php:31:    public function handle(Schedule $schedule)
+
+

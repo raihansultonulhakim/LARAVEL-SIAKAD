@@ -18,6 +18,7 @@
       <div>
         <label for="nip" class="block text-gray-700 font-medium">NIP/NIDN</label>
         <input type="text" id="nip" name="nip" 
+               value="{{ $nextNip ?? '' }}"
                class="w-full border rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-400 outline-none" 
                placeholder="Masukkan NIP/NIDN">
       </div>

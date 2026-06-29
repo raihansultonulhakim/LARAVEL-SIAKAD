@@ -15,7 +15,9 @@
             <img src="{{ asset('img/LOGO_POLTEKAD.png') }}" alt="Logo SIAKAD" class="w-10 h-10">
             <h1 class="text-white text-xl font-bold">SIAKAD</h1>
         </div>
-        <div>
+        <div class="flex items-center">
+            <a href="{{ route('public.dosen.index') }}" class="bg-white text-blue-600 px-4 py-2 rounded-lg mr-2">Data Dosen</a>
+            <a href="{{ route('public.mahasiswa.search') }}" class="bg-white text-blue-600 px-4 py-2 rounded-lg mr-2">Cek Data Mahasiswa</a>
             <a href="{{ route('login') }}" class="bg-white text-blue-600 px-4 py-2 rounded-lg mr-2">Login</a>
             <a href="{{ route('register') }}" class="bg-yellow-400 text-white px-4 py-2 rounded-lg">Register</a>
         </div>

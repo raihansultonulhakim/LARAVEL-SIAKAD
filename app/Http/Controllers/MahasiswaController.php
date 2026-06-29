@@ -15,7 +15,11 @@ class MahasiswaController extends Controller
 
     public function create()
     {
-        return view('admin.mahasiswa.create');
+        // Auto-generate next NIM
+        $lastMahasiswa = Mahasiswa::orderBy('nim', 'desc')->first();
+        $nextNIM = $lastMahasiswa ? (intval($lastMahasiswa->nim) + 1) : 2401001;
+        
+        return view('admin.crud.tambah_datamahasiswa', compact('nextNIM'));
     }
 
     public function store(Request $request)

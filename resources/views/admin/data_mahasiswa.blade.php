@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIAKAD Dashboard</title>
+  <title>SIAKAD Data Mahasiswa</title>
    <link rel="icon" type="image/png" href="{{ asset('img/LOGO_POLTEKAD.png') }}">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -103,7 +103,7 @@
     <div class="p-6">
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="font-semibold text-lg mb-4">Data Mahasiswa</h3>
-        <a href="/tambah data mahasiswa">
+        <a href="{{ route('mahasiswa.create') }}">
           <button class="mb-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded flex items-center gap-2">
   <span>➕</span> Tambah
 </button>
